@@ -1,4 +1,7 @@
 class Solution {
+    
+    //다시해보기
+    
     fun solution(s: String): Int = s
         .replace("zero", "0")
         .replace("one", "1")
