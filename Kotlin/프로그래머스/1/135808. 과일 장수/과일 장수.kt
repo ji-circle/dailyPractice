@@ -10,9 +10,6 @@ class Solution {
             answer += tempScore[i]*m
             i+=m
         }
-        
-        
-        
         return answer
     }
 }
