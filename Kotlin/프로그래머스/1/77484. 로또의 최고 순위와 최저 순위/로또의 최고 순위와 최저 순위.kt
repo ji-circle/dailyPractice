@@ -1,31 +1,18 @@
 class Solution {
-    fun solution(lottos: IntArray, win_nums: IntArray): List<Int> {
-        var match = 0
-        var blank = 0
-        for(lotto in lottos){
-            if(lotto == 0){
-                blank++
-                continue
+    fun solution(lottos: IntArray, win_nums: IntArray): IntArray {
+        var best = 0
+        var worst = 0
+        lottos.forEach{
+            if(it == 0){
+                best++
             }
-            for(num in win_nums){
-                if(num == lotto){
-                    match ++
-                    break
-                }else{
-                    continue                    
-                }
+            if(win_nums.contains(it)){
+                best++
+                worst++
             }
-            //
         }
-        var best = (7-blank-match)
-        var worst = (7-match)
-        if(worst == 7){
-            worst = 6
-        }
-        if(best == 7){
-            best = 6
-        }
-        var answer = listOf(best,worst)
-        return answer
+        
+        fun calculate(n: Int) : Int = if(n>=2) 7-n else 6
+        return intArrayOf(calculate(best),calculate(worst))
     }
 }
