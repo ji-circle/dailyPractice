@@ -1,6 +1,18 @@
 class Solution {
     
     // 다시해보기
+
+    //fun solution(babbling: Array<String>) =
+        // count => 입력된 babbling 배열에서 조건을 만족하는 요소의 개수를 반환
+    //    babbling.count {
+            // matches => 각 요소가 정규식 패턴과 일치하는지 확인
+            //  "^ => 문자열의 시작, 그 다음 괄호 안은 여러 개의 문자열을 나타냄
+            // aya(?!aya) => "aya"로 시작하지만 "aya"로 뒤따라 나오지 않는 문자열
+            // + => 앞의 패턴이 하나 이상 반복되어야 함
+            // $ => 문자열의 끝
+    //        it.matches("^(aya(?!aya)|ye(?!ye)|woo(?!woo)|ma(?!ma))+$".toRegex())
+    //    }
+
     
     fun solution(babbling: Array<String>): Int {
     var answer: Int = 0
